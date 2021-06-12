@@ -52,7 +52,7 @@ function getData() {
         if (snap.numChildren() > 0) {
             userListUI.innerHTML += `
         <li class="chat-inverted">
-            <div class="chat-badge"><i class="fas fa-user"></i></div>
+            <div class="chat-badge"><i class="fas fa-user text-body-maroon"></i></div>
             <div class="chat-panel">
                 <div class="chat-heading">
                     <h6 class="chat-title text-body-maroon text-start fw-bolder">

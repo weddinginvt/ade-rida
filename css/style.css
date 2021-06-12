@@ -167,17 +167,17 @@ section{
 .btn-gold{
     transition: 600ms;
     background-color: #ffd700;
-    color: #fff;
+    color: #c0392b;
 }
 
 .btn-outline-gold:hover{
     background-color: #ffd700;
-    color: #fff;
+    color: #c0392b;
 }
 
 .btn-gold:hover{
     background-color: #d4b502;
-    color: #fff;
+    color: #c0392b;
 }
 
 .v-syukuran{

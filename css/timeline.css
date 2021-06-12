@@ -9,7 +9,7 @@
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #FFF9ED;
+  background-color: #ffd700;
   left: 50%;
   margin-left: -1.5px;
 }
@@ -88,7 +88,7 @@ padding-left:90px;
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #5F3E24;
+  background-color: #ffd700;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;

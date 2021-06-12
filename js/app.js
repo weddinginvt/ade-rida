@@ -55,13 +55,13 @@ function getData() {
             <div class="chat-badge"><i class="fas fa-user"></i></div>
             <div class="chat-panel">
                 <div class="chat-heading">
-                    <h6 class="chat-title text-body text-start fw-bolder">
+                    <h6 class="chat-title text-body-maroon text-start fw-bolder">
                         <p child-key="${snap.key}" class="d-none"></p>
                         ${user.name}
                     </h6>
                 </div>
                 <div class="chat-body">
-                    <p class="text-body text-start">
+                    <p class="text-body-maroon text-start">
                     ${user.message}
                     </p>
                 </div>
@@ -71,7 +71,7 @@ function getData() {
         } else {
             userListUI.innerHTML =
                 `
-        <div class="alert alert-secondary text-body" role="alert">
+        <div class="alert alert-secondary text-body-maroon" role="alert">
             Belum ada ucapan
         </div>
         `;

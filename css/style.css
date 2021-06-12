@@ -20,11 +20,11 @@ section{
 }
 
 .ceritakita{
-    background-color: #dac4bd;
+    background-color: #c0392b;
 }
 
 .acara{
-    background-color: #dac4bd;
+    background-color: #c0392b;
 }
 
 .protocol{
@@ -41,11 +41,15 @@ section{
 }
 
 .bg-semi-circle{
-    background-color:#dbc4bf;
+    background-color:#c0392b;
 }
 
 .bg-kuning{
     background-color: #EDB16D;
+}
+
+.bg-maroon{
+    background-color: #c0392b;
 }
 
 .bg-akad{
@@ -57,7 +61,7 @@ section{
 }
 
 .bg-acara{
-    background-color: #E4CFCA;
+    background-color: #c0392b;
 }
 
 .hr-syukuran{
@@ -76,14 +80,14 @@ section{
 }
 
 .gmap{
-    background-color: #5F3E24;
+    background-color: #c0392b;
     border-radius: 16px;
 }
 
 .text-cover{
-    color: #5F3E24;
+    color: #ffd700;
     font-family: 'Crete Round', serif;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.261);
+    /* text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.261); */
 }
 
 .text-footer{
@@ -92,7 +96,12 @@ section{
 }
 
 .text-body{
-    color: #fff !important;
+    color: #ffd700 !important;
+    font-family: 'Salsa', cursive;
+}
+
+.text-body-maroon{
+    color: #c0392b !important;
     font-family: 'Salsa', cursive;
 }
 
@@ -121,18 +130,22 @@ section{
     color: #5F3E24;
 }
 
+.text-gold{
+    color: #ffd700;
+}
+
 .card-syukuran{
-    background-color: #dbc4bf;
+    background-color: #fff;
     border-radius: 16px;
 }
 
 .card-akad{
-    background-color: #dbc4bf;
+    background-color: #fff;
     border-radius: 16px;
 }
 
 .card-resepsi{
-    background-color: #dbc4bf;
+    background-color: #fff;
     border-radius: 16px;
 }
 
@@ -145,25 +158,25 @@ section{
     color: #fff !important;
 }
 
-.btn-outline-brown{
+.btn-outline-gold{
     transition: 600ms;
-    border: 2px solid #5F3E24;
-    color: #5F3E24;
+    border: 2px solid #ffd700;
+    color: #ffd700;
 }
 
-.btn-brown{
+.btn-gold{
     transition: 600ms;
-    background-color: #5F3E24;
+    background-color: #ffd700;
     color: #fff;
 }
 
-.btn-outline-brown:hover{
-    background-color: #5F3E24;
+.btn-outline-gold:hover{
+    background-color: #ffd700;
     color: #fff;
 }
 
-.btn-brown:hover{
-    background-color: #49301d;
+.btn-gold:hover{
+    background-color: #d4b502;
     color: #fff;
 }
 

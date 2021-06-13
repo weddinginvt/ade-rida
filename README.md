@@ -1,2 +1,2 @@
 # WEDDING INVITATION 
-# Ade Tian & Rida
+# Ade Tian & Rida Amelia Ristia

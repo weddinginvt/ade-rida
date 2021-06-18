@@ -1,208 +1,254 @@
-*{
-    font-family: "Open Sans", sans-serif;
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: #800000;
+}
+
+footer {
+  background-color: #333333;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.section-header {
+  padding-top: 2rem;
+}
+
+.ceritakita {
+  background-color: #800000;
+}
+
+.acara {
+  background-color: #800000;
+}
+
+.protocol {
+  background-color: #fff;
+  padding-top: 0px;
+}
+
+.semi-circle {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  background-color: #800000;
+  top: 0px;
+}
+
+.bg-semi-circle {
+  background-color: #800000;
+}
+
+.bg-kuning {
+  background-color: #edb16d;
+}
+
+.bg-maroon {
+  background-color: #800000;
+}
+
+.bg-akad {
+  background-color: #fcddda;
+}
+
+.bg-resepsi {
+  background-color: #fef7ed;
+}
+
+.bg-acara {
+  background-color: #800000;
+}
+
+.hr-syukuran {
+  border: 2px solid #5f3e24;
+  width: 100%;
+}
+
+.hr-akad {
+  border: 2px solid #5f3e24;
+  width: 100%;
+}
+
+.hr-resepsi {
+  border: 2px solid #5f3e24;
+  width: 100%;
+}
+
+.gmap {
   background-color: #c0392b;
+  border-radius: 16px;
 }
 
-footer{
-    background-color: #333333;
+.text-cover {
+  color: #ffd700;
+  font-family: "Crete Round", serif;
+  /* text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.261); */
 }
 
-
-
-section{
-    padding-top: 5rem;
+.text-footer {
+  color: #fff !important;
+  font-family: "Salsa", cursive;
 }
 
-.ceritakita{
-    background-color: #c0392b;
+.text-body {
+  color: #ffd700 !important;
+  font-family: "Salsa", cursive;
 }
 
-.acara{
-    background-color: #c0392b;
+.text-body-maroon {
+  color: #c0392b !important;
+  font-family: "Salsa", cursive;
 }
 
-.protocol{
-    background-color: #fff;
-    padding-top: 0px;
+.text-body-mempelai {
+  color: #ffd700 !important;
+  font-family: "Salsa", cursive;
 }
 
-.semi-circle{
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    background-color: #c0392b;
-    top:0px;
+.text-protocol {
+  font-family: "Medula One", cursive;
 }
 
-.bg-semi-circle{
-    background-color:#c0392b;
+.text-heading-mempelai {
+  /* color: #5F3E24; */
+  color: #ffd700;
+  font-family: "Sacramento", cursive;
 }
 
-.bg-kuning{
-    background-color: #EDB16D;
+.text-nama-mempelai {
+  font-family: "Great Vibes", cursive;
+  /* color: #5F3E24; */
+  color: #ffd700;
 }
 
-.bg-maroon{
-    background-color: #c0392b;
+.text-brown {
+  color: #5f3e24;
 }
 
-.bg-akad{
-    background-color: #fcddda;
+.text-gold {
+  color: #ffd700;
 }
 
-.bg-resepsi{
-    background-color: #fef7ed;
+.card-syukuran {
+  background-color: #fff;
+  border-radius: 16px;
 }
 
-.bg-acara{
-    background-color: #c0392b;
+.card-akad {
+  background-color: #fff;
+  border-radius: 16px;
 }
 
-.hr-syukuran{
-    border: 2px solid #5F3E24;
-    width: 100%;
+.card-resepsi {
+  background-color: #fff;
+  border-radius: 16px;
 }
 
-.hr-akad{
-    border: 2px solid #5F3E24;
-    width: 100%;
+.card-brown {
+  background-color: #5f3e24;
+  border-radius: 16px;
 }
 
-.hr-resepsi{
-    border: 2px solid #5F3E24;
-    width: 100%;
+.card-brown p {
+  color: #fff !important;
 }
 
-.gmap{
-    background-color: #c0392b;
-    border-radius: 16px;
+.card-yellow {
+  background-color: #ffd700;
+  border-radius: 16px;
 }
 
-.text-cover{
-    color: #ffd700;
-    font-family: 'Crete Round', serif;
-    /* text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.261); */
+.card-yellow p {
+  color: #800000 !important;
 }
 
-.text-footer{
-    color: #fff !important;
-    font-family: 'Salsa', cursive;
+.btn-outline-gold {
+  transition: 600ms;
+  border: 2px solid #ffd700;
+  color: #ffd700;
 }
 
-.text-body{
-    color: #ffd700 !important;
-    font-family: 'Salsa', cursive;
+.btn-gold {
+  transition: 600ms;
+  background-color: #ffd700;
+  color: #c0392b;
 }
 
-.text-body-maroon{
-    color: #c0392b !important;
-    font-family: 'Salsa', cursive;
+.btn-outline-gold:hover {
+  background-color: #ffd700;
+  color: #c0392b;
 }
 
-.text-body-mempelai{
-    color: #ffd700 !important;
-    font-family: 'Salsa', cursive;
+.btn-gold:hover {
+  background-color: #d4b502;
+  color: #c0392b;
 }
 
-.text-protocol{
-    font-family: 'Medula One', cursive;
+.v-syukuran {
+  background-image: url("../assets/ebcb13bb58be75a9ada6a84e46796c0b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
-.text-heading-mempelai{
-    /* color: #5F3E24; */
-    color: #ffd700;
-    font-family: 'Sacramento', cursive;
+.v-akad {
+  background-image: url("../assets/32a5ea50cb42bcecb82aaba8aac67353.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
-.text-nama-mempelai{
-    font-family: 'Great Vibes', cursive;
-    /* color: #5F3E24; */
-    color: #ffd700;
+.v-resepsi {
+  background-image: url("../assets/7dad5ec9180698ac896d5593e97b3b8b.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
-.text-brown{
-    color: #5F3E24;
+.btn-up {
+  z-index: 9999;
+  position: fixed;
+  right: 24px;
+  bottom: 70px;
 }
 
-.text-gold{
-    color: #ffd700;
+.btn-music {
+  z-index: 9999;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0.5;
+  transition: 600ms;
 }
 
-.card-syukuran{
-    background-color: #fff;
-    border-radius: 16px;
+.btn-music:hover {
+  opacity: 1;
 }
 
-.card-akad{
-    background-color: #fff;
-    border-radius: 16px;
+.box-music {
+  max-width: 150px;
 }
 
-.card-resepsi{
-    background-color: #fff;
-    border-radius: 16px;
+.hr-bingkai {
+  height: 4px !important;
+  width: 100%;
+  margin-top: 6px;
+  background-color: #ffd700;
 }
 
-.card-brown{
-    background-color:  #5F3E24;
-    border-radius: 16px;
-}
-
-.card-brown p{
-    color: #fff !important;
-}
-
-.btn-outline-gold{
-    transition: 600ms;
-    border: 2px solid #ffd700;
-    color: #ffd700;
-}
-
-.btn-gold{
-    transition: 600ms;
-    background-color: #ffd700;
-    color: #c0392b;
-}
-
-.btn-outline-gold:hover{
-    background-color: #ffd700;
-    color: #c0392b;
-}
-
-.btn-gold:hover{
-    background-color: #d4b502;
-    color: #c0392b;
-}
-
-.v-syukuran{
-    background-image: url('../assets/ebcb13bb58be75a9ada6a84e46796c0b.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-}
-
-.v-akad{
-    background-image: url('../assets/32a5ea50cb42bcecb82aaba8aac67353.jpg');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: bottom;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-}
-
-.v-resepsi{
-    background-image: url('../assets/7dad5ec9180698ac896d5593e97b3b8b.jpg');
-    background-repeat: no-repeat;
-    background-size:auto;
-    background-position: bottom;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+.bingkai-bawah {
+  padding-top: 0px;
 }

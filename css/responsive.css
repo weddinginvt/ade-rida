@@ -1,31 +1,25 @@
 /* Responsive */
 
-
 @media screen and (max-width: 800px) {
-
-    /* .card-brown .h1{
-        font-size: 24px;
-    }
-     .card-brown .h4{
-        font-size: 14px;
-    } */
-
+  .img-b-atas {
+    width: 300px;
+  }
+  .img-b-bawah {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-
-
-
-
+  .img-b-atas {
+    width: 200px;
+  }
+  .img-b-bawah {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
-  
-
 }
 
 @media screen and (max-width: 992px) {
-  
-
 }
-

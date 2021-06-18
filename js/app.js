@@ -13,76 +13,64 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-getData();
-lodingStatus('off');
+const db = firebase.firestore();
 
 const btnUcapan = document.getElementById('btnUcapan');
-btnUcapan.addEventListener("click", function () {
+btnUcapan.addEventListener("click", async () => {
     addData();
 });
-function getData() {
-    const dbRef = firebase.database().ref();
-    const usersRef = dbRef.child('users').orderByChild("timestamp");
 
+window.addEventListener("DOMContentLoaded", async () => {
+    getDataPesan();
+    lodingStatus('off');
+});
+
+const savePesan = (nama, pesan, timestamp) =>
+    db.collection('ade-rida').doc().set({ nama, pesan, timestamp });
+
+async function getDataPesan() {
     const userListUI = document.getElementById("list-chat");
-    const loadChat = document.getElementById("loadChat");
-    usersRef.on("child_added", snap => {
-        loadChat.classList.add('d-none');
-        let user = snap.val();
+    const onGetPesan = (callback) => db.collection('ade-rida').orderBy("timestamp", "desc").onSnapshot(callback);
 
-
-        // let arr = [{
-        //     "timestamp": snap.val().timestamp,
-        //     "array": snap.val()
-        // }];
-
-        // arr.sort(function (a, b) {
-        //     var keyA = new Date(a.timestamp * 1000),
-        //         keyB = new Date(b.timestamp * 1000);
-        //     // Compare the 2 dates
-        //     if (keyA < keyB) return -1;
-        //     if (keyA > keyB) return 1;
-        //     return 0;
-        // });
-
-        // console.log(arr);
-
-        if (snap.numChildren() > 0) {
-            userListUI.innerHTML += `
-        <li class="chat-inverted">
-            <div class="chat-badge"><i class="fas fa-user text-body-maroon"></i></div>
+    onGetPesan((querySnapshot) => {
+        userListUI.innerHTML = '';
+        if (querySnapshot.size > 0) {
+            querySnapshot.forEach(doc => {
+                userListUI.innerHTML +=
+                    `
+                <li class="chat-inverted">
+            <div class="chat-badge text-body-maroon"><i class="fas fa-user"></i></div>
             <div class="chat-panel">
                 <div class="chat-heading">
                     <h6 class="chat-title text-body-maroon text-start fw-bolder">
-                        <p child-key="${snap.key}" class="d-none"></p>
-                        ${user.name}
+                        <p class="d-none"></p>
+                        ${doc.data().nama}
                     </h6>
                 </div>
                 <div class="chat-body">
                     <p class="text-body-maroon text-start">
-                    ${user.message}
+                    ${doc.data().pesan}
                     </p>
                 </div>
             </div>
         </li>
-    `;
+        `;
+            });
         } else {
             userListUI.innerHTML =
                 `
-        <div class="alert alert-secondary text-body-maroon" role="alert">
-            Belum ada ucapan
-        </div>
-        `;
+                <div class="text-center text-body">
+                    <h1 class="display-2"><i class="far fa-comments"></i></h1>
+                    <p>Belum ada ucapan.</p>
+                </div>
+            `;
         }
 
     });
+
 }
 
-function addData() {
-    const dbRef = firebase.database().ref();
-    const usersRef = dbRef.child('users');
+async function addData() {
     const name = document.getElementById('nameChat');
     const message = document.getElementById('messageChat');
     let timestamp = new Date().getTime();
@@ -90,24 +78,17 @@ function addData() {
     lodingStatus('on');
 
     if (name.value == '') {
-        console.log('Isikan dulu nama!');
+        validasi('Isikan dulu nama !', 'warning');
         lodingStatus('off');
     } else if (message.value == '') {
-        console.log('Isikan dulu ucapan!');
+        validasi('Isikan dulu ucapan !', 'warning');
         lodingStatus('off');
     } else {
 
-        let newUsers = {
-            "name": name.value,
-            "message": message.value,
-            "timestamp": timestamp
-        }
-
-        usersRef.push(newUsers, function () {
-            lodingStatus('off');
-            chatClear();
-        });
-
+        await savePesan(name.value, message.value, timestamp);
+        getDataPesan();
+        lodingStatus('off');
+        chatClear();
 
     }
 
@@ -136,4 +117,13 @@ function chatClear() {
 
     name.value = "";
     message.value = "";
+}
+
+function validasi(pesan, type) {
+    Swal.fire({
+        icon: type,
+        title: pesan,
+        confirmButtonText: 'Oke',
+        confirmButtonColor: '#800000',
+    })
 }

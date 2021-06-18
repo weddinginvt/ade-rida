@@ -1,614 +1,714 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#dac4bd" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Link ICON -->
-    <link rel="stylesheet" href="icon/css/all.min.css">
+    <link rel="stylesheet" href="icon/css/all.min.css" />
     <!-- Syle CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gmap.css">
-    <link rel="stylesheet" href="css/timeline.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gmap.css" />
+    <link rel="stylesheet" href="css/timeline.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="plugin/sweetalert2/dist/sweetalert2.min.css" />
     <!-- Import Font -->
-    <link href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:300,400,600,700,800"
-        rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet" />
 
     <title>Wedding</title>
-</head>
+  </head>
 
-<body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-bs-offset="0">
     <!-- Bg Cover -->
     <div class="semi-circle"></div>
 
+    <!-- Up Button -->
+    <a href="#" class="btn btn-dark btn-up rounded text-center shadow" id="btnup" onclick="onTop()"><i
+        class="fas fa-chevron-up"></i></a>
+    <!-- end upbutton -->
+
+    <!-- Music bg -->
+    <button class="btn btn-dark btn-music text-white rounded-pill border-0 d-flex" id="btnToggleMusic"
+        data-status="stop">
+        <marquee direction="left" class="box-music" id="marqueeMusic">
+            Beautiful-In-White_Shane-Filan.mp3
+        </marquee>
+        <i class="fas fa-pause mt-1 ms-2 d-block" id="iPause"></i>
+        <i class="fas fa-play mt-1 ms-2 d-none" id="iPlay"></i>
+    </button>
+    <!-- End Music bg -->
+
     <!-- Judul -->
-    <section id="cover" class="position-relative">
-
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-12 text-center mb-5">
-                    <h1 class="display-2 text-cover">PERNIKAHAN</h1>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="assets/dedua.png" width="100%" class="mb-2" />
-                    <h2 class="text-gold fw-bolder mb-4">Senin, 12 Juli 2021</h2>
-                    <button class="btn btn-lg btn-outline-gold">SAVE THE DATE</button>
-                </div>
+    <section id="cover" class="position-relative section-header">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-4 col-md-8 text-center mb-4">
+                <img src="assets/bingkai-atas-baru.png" width="100%">
+                <div class="hr-bingkai"></div>
             </div>
-
+          <div class="col-12 text-center">
+            <h1 class="display-2 text-cover mb-5">PERNIKAHAN</h1>
+          </div>
+          <div class="col-md-5 text-center">
+            <img src="assets/dedua.png" width="100%" class="mb-2" />
+            <h2 class="text-gold fw-bolder mb-4">Senin, 12 Juli 2021</h2>
+            <a href="#akad" class="btn btn-lg btn-outline-gold">SAVE THE DATE</a>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Judul -->
 
     <!-- Paragraf 1 -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-6 text-center">
-                    <p class="text-body">Maha Suci Allah SWT <br />
-                        Yang telah menciptakan makhlukNya berpasang-pasangan.
-                        Ya Allah, perkenankanlah dan Ridhoilah putra-putri kami :</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center">
+            <p class="text-body">
+              Maha Suci Allah SWT <br />
+              Yang telah menciptakan makhlukNya berpasang-pasangan. Ya Allah, perkenankanlah dan Ridhoilah putra-putri kami :
+            </p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Paragraf 1 -->
 
     <!-- Mempelai -->
     <section id="mempelai">
-        <div class="container">
-
-            <!-- Mempelai Pria -->
-            <div class="row mb-5">
-                <div class="col-md-6 text-center mb-4">
-                    <img src="assets/bingkai_memplai2.png" width="75%" />
-                </div>
-                <div class="col-md-6 text-center mt-5">
-                    <p class="display-5 text-heading-mempelai fw-bold">Mempelai Pria</p>
-                    <p class="display-2 text-nama-mempelai">Ade Tian</p>
-                    <div>
-                        <p class="h4 text-body-mempelai"><b>Putra pertama dari</b> <br /> Bapak Idad Mikdad <br /> & Ibu Tutun Nurjanah</p>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- Mempelai Pria -->
+        <div class="row mb-5">
+          <div class="col-md-6 text-center mb-4">
+            <img src="assets/mempelai_pria.png" width="75%" />
+          </div>
+          <div class="col-md-6 text-center mt-5">
+            <p class="display-5 text-heading-mempelai fw-bold">Mempelai Pria</p>
+            <p class="display-2 text-nama-mempelai">Ade Tian</p>
+            <div>
+              <p class="h4 text-body-mempelai">
+                <b>Putra pertama dari</b> <br />
+                Bapak Idad Mikdad <br />
+                & Ibu Tutun Nurjanah
+              </p>
             </div>
-
-            <div class="d-none d-md-block">
-                <br><br>
-            </div>
-
-            <!-- Mempelai Wanita -->
-            <div class="row my-5">
-                <div class="col-md-6 text-center mt-5 mb-4">
-                    <p class="display-5 text-heading-mempelai fw-bold">Mempelai Wanita</p>
-                    <p class="display-2 text-nama-mempelai">Rida Amelia Ristia</p>
-                    <div>
-                        <p class="h4 text-body text-body-mempelai"><b>Putri tunggal dari</b> <br /> Bapak Bubun Bunyamin <br /> & Ibu Imas Masitoh</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="assets/bingkai_memplai_wanita2.png" width="75%" />
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <div class="d-none d-md-block"><br /><br /></div>
+
+        <!-- Mempelai Wanita -->
+        <div class="row my-5">
+          <div class="col-md-6 text-center mt-5 mb-4">
+            <p class="display-5 text-heading-mempelai fw-bold">Mempelai Wanita</p>
+            <p class="display-2 text-nama-mempelai">Rida Amelia Ristia</p>
+            <div>
+              <p class="h4 text-body text-body-mempelai">
+                <b>Putri tunggal dari</b> <br />
+                Bapak Bubun Bunyamin <br />
+                & Ibu Imas Masitoh
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="assets/mempelai_wanita.png" width="75%" />
+          </div>
+        </div>
+      </div>
     </section>
     <!-- end Mempelai -->
 
     <!-- Paragraf 2 -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-6 text-center">
-                    <p class="text-body">Untuk mengikuti Sunnah Rasul-Mu <br />
-                        dalam rangka membentuk keluarga yang sakinah, mawaddah,& warahmah.
-                        maka ijinkanlah kami menikahkannya.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center">
+            <p class="text-body">
+              Untuk mengikuti Sunnah Rasul-Mu <br />
+              dalam rangka membentuk keluarga yang sakinah, mawaddah,& warahmah. maka ijinkanlah kami menikahkannya.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Paragraf 2 -->
 
     <!-- Akad -->
-    <section id="syukuran">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
+    <section id="akad">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-syukuran border-0 shadow">
+              <div class="card-body p-md-0">
+                <div class="row">
+                  <div class="col-md-6 text-center px-md-5">
+                    <img src="assets/akad_nikah2.png" width="100%" class="my-2" />
+                    <div class="row">
+                      <div class="col-6">
+                        <center>
+                          <hr class="hr-syukuran" />
+                        </center>
+                        <p class="h1 mb-5">
+                          <span class="badge bg-kuning rounded-circle p-4">
+                            <i class="far fa-calendar-alt fa-2x"></i>
+                          </span>
+                        </p>
+                        <p class="h3 text-body-maroon mb-4">
+                          Senin, <br />
+                          12 Juli 2021
+                        </p>
+                        <center>
+                          <hr class="hr-syukuran" />
+                        </center>
+                      </div>
 
-                    <div class="card card-syukuran border-0 shadow">
-                        <div class="card-body p-md-0">
-                            <div class="row">
-                                <div class="col-md-6 text-center px-md-5">
-                                    <img src="assets/akad_nikah2.png" width="100%" class="my-2" />
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <center>
-                                                <hr class="hr-syukuran">
-                                            </center>
-                                            <p class="h1 mb-5">
-                                                <span class="badge bg-kuning rounded-circle p-4">
-                                                    <i class="far fa-calendar-alt fa-2x"></i>
-                                                </span>
-                                            </p>
-                                            <p class="h3 text-body-maroon mb-4">Senin, <br /> 12 Juli 2021</p>
-                                            <center>
-                                                <hr class="hr-syukuran">
-                                            </center>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <center>
-                                                <hr class="hr-syukuran">
-                                            </center>
-                                            <p class="h1 mb-5">
-                                                <span class="badge bg-kuning rounded-circle p-4">
-                                                    <i class="far fa-clock fa-2x"></i>
-                                                </span>
-                                            </p>
-                                            <p class="h3 text-body-maroon mb-4">09:00 WIB <br /> s/d Selesai</p>
-                                            <center>
-                                                <hr class="hr-syukuran">
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <p class="text-body-maroon mt-4">
-                                        <b>Lokasi:</b> <br>
-                                        Kediaman Mempelai Wanita <br>
-                                        Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis
-                                    </p>
-                                    <div class="card border-0 shadow gmap">
-                                        <div class="card-body p-2" id="gmap">
-                                            <div class="mapouter">
-                                                <div class="gmap_canvas">
-                                                    <iframe width="100%" height="350px" id="gmap_canvas"
-                                                        src="https://maps.google.com/maps?q=-7.38084,108.4117238&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                                        frameborder="0" scrolling="no" marginheight="0"
-                                                        marginwidth="0"></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="https://maps.google.com/maps?q=-7.38084,108.4117238&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                                        class="btn btn-gold shadow my-5" target="_blank"><i
-                                            class="fas fa-map-marked-alt"></i>
-                                        Lihat
-                                        Lokasi</a>
-                                </div>
-
-                                <div class="col-md-6 bg-white d-none d-md-block v-syukuran"></div>
-
-                            </div>
-                        </div>
+                      <div class="col-6">
+                        <center>
+                          <hr class="hr-syukuran" />
+                        </center>
+                        <p class="h1 mb-5">
+                          <span class="badge bg-kuning rounded-circle p-4">
+                            <i class="far fa-clock fa-2x"></i>
+                          </span>
+                        </p>
+                        <p class="h3 text-body-maroon mb-4">
+                          09:00 WIB <br />
+                          s/d Selesai
+                        </p>
+                        <center>
+                          <hr class="hr-syukuran" />
+                        </center>
+                      </div>
                     </div>
+                    <p class="text-body-maroon mt-4">
+                      <b>Lokasi:</b> <br />
+                      Kediaman Mempelai Wanita <br />
+                      Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis
+                    </p>
+                    <div class="card border-0 shadow gmap">
+                      <div class="card-body p-2" id="gmap">
+                        <div class="mapouter">
+                          <div class="gmap_canvas">
+                            <iframe
+                              width="100%"
+                              height="350px"
+                              id="gmap_canvas"
+                              src="https://maps.google.com/maps?q=-7.38084,108.4117238&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                              frameborder="0"
+                              scrolling="no"
+                              marginheight="0"
+                              marginwidth="0"
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=-7.38084,108.4117238&t=&z=16&ie=UTF8&iwloc=&output=embed" class="btn btn-gold shadow my-5" target="_blank"
+                      ><i class="fas fa-map-marked-alt"></i> Lihat Lokasi</a
+                    >
+                  </div>
 
+                  <div class="col-md-6 bg-white d-none d-md-block v-syukuran"></div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Akad -->
 
     <!-- Resepsi -->
     <section id="akad">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-akad border-0 shadow">
+              <div class="card-body p-md-0">
+                <div class="row">
+                  <div class="col-md-6 bg-akad v-akad"></div>
 
-                    <div class="card card-akad border-0 shadow">
-                        <div class="card-body p-md-0">
-                            <div class="row">
+                  <div class="col-md-6 text-center px-md-5">
+                    <img src="assets/respesi2.png" width="100%" class="my-2" />
+                    <div class="row">
+                      <div class="col-6">
+                        <center>
+                          <hr class="hr-akad" />
+                        </center>
+                        <p class="h1 mb-5">
+                          <span class="badge bg-kuning rounded-circle p-4">
+                            <i class="far fa-calendar-alt fa-2x"></i>
+                          </span>
+                        </p>
+                        <p class="h3 text-body-maroon mb-4">
+                          Senin, <br />
+                          12 Juli 2021
+                        </p>
+                        <center>
+                          <hr class="hr-akad" />
+                        </center>
+                      </div>
 
-                                <div class="col-md-6 bg-akad v-akad"></div>
-
-                                <div class="col-md-6 text-center px-md-5">
-                                    <img src="assets/respesi2.png" width="100%" class="my-2" />
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <center>
-                                                <hr class="hr-akad">
-                                            </center>
-                                            <p class="h1 mb-5">
-                                                <span class="badge bg-kuning rounded-circle p-4">
-                                                    <i class="far fa-calendar-alt fa-2x"></i>
-                                                </span>
-                                            </p>
-                                            <p class="h3 text-body-maroon mb-4">Senin, <br /> 12 Juli 2021</p>
-                                            <center>
-                                                <hr class="hr-akad">
-                                            </center>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <center>
-                                                <hr class="hr-akad">
-                                            </center>
-                                            <p class="h1 mb-5">
-                                                <span class="badge bg-kuning rounded-circle p-4">
-                                                    <i class="far fa-clock fa-2x"></i>
-                                                </span>
-                                            </p>
-                                            <p class="h3 text-body-maroon mb-4">09:00 WIB <br /> s/d Selesai</p>
-                                            <center>
-                                                <hr class="hr-akad">
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <p class="text-body-maroon mt-4">
-                                        <b>Lokasi:</b> <br>
-                                        Kediaman Mempelai Wanita <br>
-                                        Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
+                      <div class="col-6">
+                        <center>
+                          <hr class="hr-akad" />
+                        </center>
+                        <p class="h1 mb-5">
+                          <span class="badge bg-kuning rounded-circle p-4">
+                            <i class="far fa-clock fa-2x"></i>
+                          </span>
+                        </p>
+                        <p class="h3 text-body-maroon mb-4">
+                          09:00 WIB <br />
+                          s/d Selesai
+                        </p>
+                        <center>
+                          <hr class="hr-akad" />
+                        </center>
+                      </div>
                     </div>
-
+                    <p class="text-body-maroon mt-4">
+                      <b>Lokasi:</b> <br />
+                      Kediaman Mempelai Wanita <br />
+                      Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Resepsi -->
 
     <!-- Map Mempelai Wanita -->
     <section>
-        
-        <div class="bg-semi-circle">
-            <div class="container">
-                <div class="row mt-5 justify-content-center">
-  
-                    <div class="col-12 mt-5 text-center">
-                        <p class="text-body mb-4">
-                            "Mampukanlah kami menyelesaikan segala perkara. Memulai segala halang yang menghadang.
-                            Mewujudkan rencana-rencana baik.
-                            Sebab jatuh dan cinta telah kami lalui. Semoga dimudahkan kemudian. Langkah-langkah akan
-                            menjadi satu tuju. Kelak, saat
-                            kami saling tua dan pelupa Do'akanlah agar kami tetap ingat bahwa cinta akan selalu lebih
-                            kuat. Anugerahi kami anak-anak
-                            yang baik, rezeki yang berkah. Dan perasaan-perasaan yang tidak berubah. Tetap saling setia.
-                            Menghadapi apapun bersama.
-                            Jadikanlah pernikahan ini cara kami mendekatkan diri kepada pemilik semesta, kepada sesama
-                            manusia."
-                        </p>
-                        <p class="text-body fw-bold">-Boy Candra-</p>
-                    </div>
-                </div>
+      <div class="bg-semi-circle">
+        <div class="container">
+          <div class="row mt-5 justify-content-center">
+            <div class="col-12 mt-5 text-center">
+              <p class="text-body mb-4">
+                "Mampukanlah kami menyelesaikan segala perkara. Memulai segala halang yang menghadang. Mewujudkan rencana-rencana baik. Sebab jatuh dan cinta telah kami lalui. Semoga dimudahkan
+                kemudian. Langkah-langkah akan menjadi satu tuju. Kelak, saat kami saling tua dan pelupa Do'akanlah agar kami tetap ingat bahwa cinta akan selalu lebih kuat. Anugerahi kami anak-anak
+                yang baik, rezeki yang berkah. Dan perasaan-perasaan yang tidak berubah. Tetap saling setia. Menghadapi apapun bersama. Jadikanlah pernikahan ini cara kami mendekatkan diri kepada
+                pemilik semesta, kepada sesama manusia."
+              </p>
+              <p class="text-body fw-bold">-Boy Candra-</p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Map -->
 
     <!-- Cerita Kita -->
     <section id="ceritakita" class="ceritakita">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5 text-center">
-                    <p class="display-2 fw-bolder text-nama-mempelai">Cerita Kita</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-5 text-center">
+            <p class="display-2 fw-bolder text-nama-mempelai">Cerita Kita</p>
+          </div>
+
+          <div class="col-12">
+            <ul class="timeline">
+              <li class="timeline-inverted mt-4" id="panel1">
+                <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title text-body-maroon fw-bolder">26 Juni 2020</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-body-maroon">
+                      Mulainya kita tak saling kenal, berawal dari media sosial bertegur sapa kita mulai. Pertama kali kita bertemu saling bertatapan bukan lagi virtual ala anak LDRan, dari sinilah
+                      kita mulai mengenal lebih dalam karakter masing-masing dari kita.
+                    </p>
+                  </div>
                 </div>
-
-                <div class="col-12">
-                    <ul class="timeline">
-                        <li class="timeline-inverted" id="panel1">
-                            <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title text-body-maroon fw-bolder">2014</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-body-maroon">
-                                        Awal pertemuan di sekolah, lebih tepatnya di sebuah organisasi yaitu Pramuka.
-                                        Saat itu, 16 Desember 2014 kita mulai
-                                        menjalin hubungan. Pacaran ala ala anak SMK gitu 🙂
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mt-4" id="panel2">
-                            <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title text-body-maroon fw-bolder">2016</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-body-maroon">
-                                        Awal dari LDR. Mulai dari jarak yang masih bisa dibilang dekat, sampai jarak
-                                        yang benar-benar jauh, beda negara.
-                                        Berbulan-bulan bahkan sampai 2 tahun ldr beda negara.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-inverted mt-4" id="panel3">
-                            <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title text-body-maroon fw-bolder">2019</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-body-maroon">
-                                        Setelah ldr yang melelahkan, Dodi pulang. Akhirnya di tahun itu kita memutuskan
-                                        untuk ke tahap yang lebih serius, yaitu
-                                        tunangan.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="mt-4" id="panel4">
-                            <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title text-body-maroon fw-bolder">2021</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-body-maroon">
-                                        Setelah 6 tahun berlalu dan setelah lika liku perjalanan yang kita lalui,
-                                        akhirnya kita akan memulai perjalanan baru.
-                                        Yang kita yakin, ini bukanlah akhir melainkan awal dari semuanya. Mohon do'anya
-                                        ya teman-teman 🙂
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
+              </li>
+              <li class="mt-4" id="panel2">
+                <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title text-body-maroon fw-bolder">26 Agustus 2020</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-body-maroon">
+                      Kita kembali bertemu, karena hubungan kita LDR jadi paling bisa bertemu hanya 3 bulan sekali itu juga paling 3 hari kita bertemu, sisanya hanya lewat virtual. Akhirnya kita
+                      memutuskan berkomitmen untuk saling memperjuangkan dan saling membuktikan kalimat : "kita akan menjadi pasangan suami istri kurang dari setahun dari sekarang".
+                    </p>
+                  </div>
                 </div>
-            </div>
+              </li>
+
+              <li class="timeline-inverted mt-4" id="panel3">
+                <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title text-body-maroon fw-bolder">02 Januari 2021</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-body-maroon">
+                      Hingga akhirnya kita bertunangan melangkah ke jenjang yang lebih serius. Alhamdulillah Allah Maha baik, menyatukan insan yang tidak saling kenal dengan karakter yang berbeda,
+                      terima kasih atas do'a dan dukungan akhirnya kita bisa melaksanakan akad nikah 🙂.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Cerita Kita -->
 
     <!-- Acara -->
-    <section id="acara" class="acara">
-        <div class="container">
+    <section id="acara" class="acara position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 my-5">
+            <div class="card border-0 bg-maroon mb-5">
+              <div class="card-body">
+                <div class="row my-5">
+                  <div class="col-md-6 mb-4 text-center">
+                    <h4 class="text-body">WAKTU MENUJU ACARA</h4>
+                    <h1 class="text-body fw-bold">Pernikahan Kami</h1>
+                    <img src="assets/01-9-1-1024x176.png" width="40%" class="my-4" />
 
-            <div class="row">
-                <div class="col my-5">
-                    <div class="card border-0 bg-acara mb-5">
-                        <div class="card-body">
-                            <div class="row my-5">
-                                <div class="col-md-6 mb-4 text-center">
-                                    <h4 class="text-body">WAKTU MENUJU ACARA</h4>
-                                    <h1 class="text-body fw-bold">Pernikahan Kami</h1>
-                                    <img src="assets/01-9-1-1024x176.png" width="40%" class="my-4">
-
-                                    <div class="row mt-2 mb-5">
-                                        <div class="col-6 col-lg-3 mb-4 text-center">
-                                            <div class="card border-0 shadow card-brown">
-                                                <div class="card-body">
-                                                    <p class="h2 hari text-body">0</p>
-                                                    <p class="h5 text-body">Hari</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-lg-3 mb-4 text-center">
-                                            <div class="card border-0 shadow card-brown">
-                                                <div class="card-body">
-                                                    <p class="h2 jam text-body">0</p>
-                                                    <p class="h5 text-body">Jam</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-lg-3 mb-4 text-center">
-                                            <div class="card border-0 shadow card-brown">
-                                                <div class="card-body">
-                                                    <p class="h2 menit text-body">0</p>
-                                                    <p class="h5 text-body">Menit</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-lg-3 mb-4 text-center">
-                                            <div class="card border-0 shadow card-brown">
-                                                <div class="card-body">
-                                                    <p class="h2 detik text-body">0</p>
-                                                    <p class="h5 text-body">Detik</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding+Ade+&+Rida&details&dates=20210418T090000/20210712T090000&location"
-                                        target="_blank" class="btn btn-gold shadow"><i class="far fa-clock"></i>
-                                        Ingatkan Saya</a>
-
-                                    <h4 class="text-body fw-bold my-5">UNTUK YANG BERHALANGAN HADIR, KAMI TAMBAHKAN
-                                        FITUR
-                                        DIBAWAH INI
-                                    </h4>
-
-                                    <div class="row">
-                                        <div class="col-6 text-center">
-                                            <button class="btn btn-gold shadow"><i class="fas fa-money-bill-wave"></i>
-                                                Angpou</button>
-                                        </div>
-                                        <div class="col-6 mb-5 text-center">
-                                            <button class="btn btn-gold shadow"><i class="fas fa-gift"></i>
-                                                Kirim Kado</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-6 text-center">
-                                    <h1 class="text-body fw-bold"><i>RSVP</i></h1>
-                                    <div class="form-group mt-4">
-                                        <input type="text" class="form-control text-body-maroon" placeholder="Isi Nama">
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <textarea class="form-control text-body-maroon" placeholder="Alamat" rows="4"></textarea>
-                                    </div>
-                                    <div class="form-group mt-2 text-start">
-                                        <p class="text-body">Konfirmasi</p>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault1">
-                                            <label class="form-check-label text-body" for="flexRadioDefault1">
-                                                Iya, Saya Akan Datang
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2">
-                                            <label class="form-check-label text-body" for="flexRadioDefault2">
-                                                Saya Masih Ragu
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault3">
-                                            <label class="form-check-label text-body" for="flexRadioDefault3">
-                                                Maaf, Saya Tidak Bisa Datang
-                                            </label>
-                                        </div>
-
-                                        <button class="btn btn-gold shadow mt-4">Reservation Via Whatsapp</button>
-                                    </div>
-
-                                    <h4 class="text-body mt-5">KIRIM PESAN</h4>
-                                    <h1 class="text-body fw-bold">Untuk Kedua Mempelai</h1>
-
-                                    <div class="form-group mt-4">
-                                        <input type="text" class="form-control text-body-maroon" id="nameChat"
-                                            placeholder="Isikan Nama" required>
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <textarea class="form-control text-body-maroon" id="messageChat"
-                                            placeholder="Tuliskan Pesan dan Doa" rows="4" required></textarea>
-                                    </div>
-
-                                    <div class="form-group text-start">
-                                        <button class="btn btn-gold shadow mt-4" id="btnLoading" type="button"
-                                            disabled>
-                                            <span class="spinner-border spinner-border-sm" role="status"
-                                                aria-hidden="true"></span>
-                                            <span class="visually-hidden">Loading...</span>
-                                        </button>
-                                        <button id="btnUcapan" class="btn btn-gold shadow mt-4">Kirim
-                                            Ucapan</button>
-                                    </div>
-
-                                    <div class="chat-box mt-4">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <ul class="chat" id="list-chat">
-                                                    <div class="spinner-border text-light" role="status" id="loadChat">
-                                                        <span class="visually-hidden">Loading...</span>
-                                                    </div>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                    <div class="row mt-2 mb-5">
+                      <div class="col-6 col-lg-3 mb-4 text-center">
+                        <div class="card border-0 shadow card-yellow">
+                          <div class="card-body">
+                            <p class="h2 hari text-body">0</p>
+                            <p class="h5 text-body">Hari</p>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                      </div>
 
+                      <div class="col-6 col-lg-3 mb-4 text-center">
+                        <div class="card border-0 shadow card-yellow">
+                          <div class="card-body">
+                            <p class="h2 jam text-body">0</p>
+                            <p class="h5 text-body">Jam</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-lg-3 mb-4 text-center">
+                        <div class="card border-0 shadow card-yellow">
+                          <div class="card-body">
+                            <p class="h2 menit text-body">0</p>
+                            <p class="h5 text-body">Menit</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-lg-3 mb-4 text-center">
+                        <div class="card border-0 shadow card-yellow">
+                          <div class="card-body">
+                            <p class="h2 detik text-body">0</p>
+                            <p class="h5 text-body">Detik</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a
+                      href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding+Ade+&+Rida&details&dates=20210418T090000/20210712T090000&location"
+                      target="_blank"
+                      class="btn btn-gold shadow"
+                      ><i class="far fa-clock"></i> Ingatkan Saya</a
+                    >
+
+                    <h4 class="text-body fw-bold my-5">UNTUK YANG BERHALANGAN HADIR, KAMI TAMBAHKAN FITUR DIBAWAH INI</h4>
+
+                    <div class="row">
+                      <div class="col-6 text-center">
+                        <button class="btn btn-gold shadow" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-money-bill-wave"></i> Angpou</button>
+                      </div>
+                      <div class="col-6 mb-5 text-center">
+                        <button class="btn btn-gold shadow" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="fas fa-gift"></i> Kirim Kado</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 text-center">
+                    <h1 class="text-body fw-bold"><i>RSVP</i></h1>
+                    <form name="rsvpForm">
+                    <div class="form-group mt-4">
+                      <input type="text" class="form-control text-body-maroon" placeholder="Isi Nama" id="namaRv" />
+                    </div>
+                    <div class="form-group mt-2">
+                      <textarea class="form-control text-body-maroon" placeholder="Alamat" id="alamatRv" rows="4"></textarea>
+                    </div>
+                    <div class="form-group mt-2 text-start">
+                      <p class="text-body">Konfirmasi</p>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="konfirmasi" value="Iya, Saya Akan Datang" />
+                        <label class="form-check-label text-body" for="flexRadioDefault1"> Iya, Saya Akan Datang </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="konfirmasi" value="Saya Masih Ragu" />
+                        <label class="form-check-label text-body" for="flexRadioDefault2"> Saya Masih Ragu </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="konfirmasi" value="Maaf, Saya Tidak Bisa Datang" />
+                        <label class="form-check-label text-body" for="flexRadioDefault3"> Maaf, Saya Tidak Bisa Datang </label>
+                      </div>
+
+                      <a href="javascript:void(0)" class="btn btn-gold shadow mt-4"
+                                                onclick="rsvp()">Reservation
+                                                Via
+                                                Whatsapp</a>
+
+                    </form>
+                    </div>
+
+                    <h4 class="text-body mt-5">KIRIM PESAN</h4>
+                    <h1 class="text-body fw-bold">Untuk Kedua Mempelai</h1>
+
+                    <div class="form-group mt-4">
+                      <input type="text" class="form-control text-body-maroon" id="nameChat" placeholder="Isikan Nama" required />
+                    </div>
+                    <div class="form-group mt-2">
+                      <textarea class="form-control text-body-maroon" id="messageChat" placeholder="Tuliskan Pesan dan Doa" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group text-start">
+                      <button class="btn btn-gold shadow mt-4" id="btnLoading" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Loading...</span>
+                      </button>
+                      <button id="btnUcapan" class="btn btn-gold shadow mt-4">Kirim Ucapan</button>
+                    </div>
+
+                    <div class="chat-box mt-4">
+                      <div class="row">
+                        <div class="col-12">
+                          <ul class="chat" id="list-chat">
+                            <div class="spinner-border text-light" role="status" id="loadChat">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
     </section>
     <!-- End Acara -->
 
-    <!-- Protocol -->
-    <section id="protocol" class="protocol">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="xMidYMax slice">
-            <path class="elementor-shape-fill" fill="#c0392b"
-                d="M0 0v6.7c1.9-.8 4.7-1.4 8.5-1 9.5 1.1 11.1 6 11.1 6s2.1-.7 4.3-.2c2.1.5 2.8 2.6 2.8 2.6s.2-.5 1.4-.7c1.2-.2 1.7.2 1.7.2s0-2.1 1.9-2.8c1.9-.7 3.6.7 3.6.7s.7-2.9 3.1-4.1 4.7 0 4.7 0 1.2-.5 2.4 0 1.7 1.4 1.7 1.4h1.4c.7 0 1.2.7 1.2.7s.8-1.8 4-2.2c3.5-.4 5.3 2.4 6.2 4.4.4-.4 1-.7 1.8-.9 2.8-.7 4 .7 4 .7s1.7-5 11.1-6c9.5-1.1 12.3 3.9 12.3 3.9s1.2-4.8 5.7-5.7c4.5-.9 6.8 1.8 6.8 1.8s.6-.6 1.5-.9c.9-.2 1.9-.2 1.9-.2s5.2-6.4 12.6-3.3c7.3 3.1 4.7 9 4.7 9s1.9-.9 4 0 2.8 2.4 2.8 2.4 1.9-1.2 4.5-1.2 4.3 1.2 4.3 1.2.2-1 1.4-1.7 2.1-.7 2.1-.7-.5-3.1 2.1-5.5 5.7-1.4 5.7-1.4 1.5-2.3 4.2-1.1c2.7 1.2 1.7 5.2 1.7 5.2s.3-.1 1.3.5c.5.4.8.8.9 1.1.5-1.4 2.4-5.8 8.4-4 7.1 2.1 3.5 8.9 3.5 8.9s.8-.4 2 0 1.1 1.1 1.1 1.1 1.1-1.1 2.3-1.1 2.1.5 2.1.5 1.9-3.6 6.2-1.2 1.9 6.4 1.9 6.4 2.6-2.4 7.4 0c3.4 1.7 3.9 4.9 3.9 4.9s3.3-6.9 10.4-7.9 11.5 2.6 11.5 2.6.8 0 1.2.2c.4.2.9.9.9.9s4.4-3.1 8.3.2c1.9 1.7 1.5 5 1.5 5s.3-1.1 1.6-1.4c1.3-.3 2.3.2 2.3.2s-.1-1.2.5-1.9 1.9-.9 1.9-.9-4.7-9.3 4.4-13.4c5.6-2.5 9.2.9 9.2.9s5-6.2 15.9-6.2 16.1 8.1 16.1 8.1.7-.2 1.6-.4V0H0z" />
-        </svg>
-
+    <!-- Bingkai bawah -->
+    <section class="bingkai-bawah">
         <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5 text-center">
-                    <p class="h3 text-protocol mt-4">Jangan ragu untuk datang, kami sudah berkoordinasi dengan semua
-                        pihak
-                        terkait pencegahan penularan COVID-19. Acara kami
-                        akan mengikuti segala prosedur protokol kesehatan untuk mencegah penularan COVID-19. So, don't
-                        be panic, we look forward
-                        to seeing you there!</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4 col-md-8 text-center">
+                    <div class="hr-bingkai"></div>
+                    <img src="assets/bingkai-bawah-baru.png" width="100%">
                 </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 text-center">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <img src="assets/wdp-ikon_covid_03.png" width="65%">
-                            <p class="h3 text-protocol mt-4">
-                                Tamu undangan wajib menggunakan masker.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 text-center">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <img src="assets/wdp-ikon_covid_01.png" width="65%">
-                            <p class="h3 text-protocol mt-4">
-                                Suhu tubuh normal (dibawah 37,5°C)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 text-center">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <img src="assets/wdp-ikon_covid_04.png" width="65%">
-                            <p class="h3 text-protocol mt-4">
-                                Jaga jarak antar orang minimal sekitar 1 meter.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 text-center">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <img src="assets/wdp-ikon_covid_02.png" width="65%">
-                            <p class="h3 text-protocol mt-4">
-                                Cuci tangan menggunakan air dan sabun atau menggunakan hand sanitizer.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 text-center mb-4">
-                    <p class="h3 text-protocol">Bagi para tamu undangan diharapkan mengikuti protokol pencegahan
-                        COVID-19.</p>
-                </div>
-
             </div>
         </div>
+    </section>
+    <!-- End bingkai bawah -->
+
+    <!-- Protocol -->
+    <section id="protocol" class="protocol">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="xMidYMax slice">
+        <path
+          class="elementor-shape-fill"
+          fill="#800000"
+          d="M0 0v6.7c1.9-.8 4.7-1.4 8.5-1 9.5 1.1 11.1 6 11.1 6s2.1-.7 4.3-.2c2.1.5 2.8 2.6 2.8 2.6s.2-.5 1.4-.7c1.2-.2 1.7.2 1.7.2s0-2.1 1.9-2.8c1.9-.7 3.6.7 3.6.7s.7-2.9 3.1-4.1 4.7 0 4.7 0 1.2-.5 2.4 0 1.7 1.4 1.7 1.4h1.4c.7 0 1.2.7 1.2.7s.8-1.8 4-2.2c3.5-.4 5.3 2.4 6.2 4.4.4-.4 1-.7 1.8-.9 2.8-.7 4 .7 4 .7s1.7-5 11.1-6c9.5-1.1 12.3 3.9 12.3 3.9s1.2-4.8 5.7-5.7c4.5-.9 6.8 1.8 6.8 1.8s.6-.6 1.5-.9c.9-.2 1.9-.2 1.9-.2s5.2-6.4 12.6-3.3c7.3 3.1 4.7 9 4.7 9s1.9-.9 4 0 2.8 2.4 2.8 2.4 1.9-1.2 4.5-1.2 4.3 1.2 4.3 1.2.2-1 1.4-1.7 2.1-.7 2.1-.7-.5-3.1 2.1-5.5 5.7-1.4 5.7-1.4 1.5-2.3 4.2-1.1c2.7 1.2 1.7 5.2 1.7 5.2s.3-.1 1.3.5c.5.4.8.8.9 1.1.5-1.4 2.4-5.8 8.4-4 7.1 2.1 3.5 8.9 3.5 8.9s.8-.4 2 0 1.1 1.1 1.1 1.1 1.1-1.1 2.3-1.1 2.1.5 2.1.5 1.9-3.6 6.2-1.2 1.9 6.4 1.9 6.4 2.6-2.4 7.4 0c3.4 1.7 3.9 4.9 3.9 4.9s3.3-6.9 10.4-7.9 11.5 2.6 11.5 2.6.8 0 1.2.2c.4.2.9.9.9.9s4.4-3.1 8.3.2c1.9 1.7 1.5 5 1.5 5s.3-1.1 1.6-1.4c1.3-.3 2.3.2 2.3.2s-.1-1.2.5-1.9 1.9-.9 1.9-.9-4.7-9.3 4.4-13.4c5.6-2.5 9.2.9 9.2.9s5-6.2 15.9-6.2 16.1 8.1 16.1 8.1.7-.2 1.6-.4V0H0z"
+        />
+      </svg>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-5 text-center">
+            <p class="h3 text-protocol mt-4">
+              Jangan ragu untuk datang, kami sudah berkoordinasi dengan semua pihak terkait pencegahan penularan COVID-19. Acara kami akan mengikuti segala prosedur protokol kesehatan untuk mencegah
+              penularan COVID-19. So, don't be panic, we look forward to seeing you there!
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4 text-center">
+            <div class="card border-0">
+              <div class="card-body">
+                <img src="assets/wdp-ikon_covid_03.png" width="65%" />
+                <p class="h3 text-protocol mt-4">Tamu undangan wajib menggunakan masker.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4 text-center">
+            <div class="card border-0">
+              <div class="card-body">
+                <img src="assets/wdp-ikon_covid_01.png" width="65%" />
+                <p class="h3 text-protocol mt-4">Suhu tubuh normal (dibawah 37,5°C)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4 text-center">
+            <div class="card border-0">
+              <div class="card-body">
+                <img src="assets/wdp-ikon_covid_04.png" width="65%" />
+                <p class="h3 text-protocol mt-4">Jaga jarak antar orang minimal sekitar 1 meter.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4 text-center">
+            <div class="card border-0">
+              <div class="card-body">
+                <img src="assets/wdp-ikon_covid_02.png" width="65%" />
+                <p class="h3 text-protocol mt-4">Cuci tangan menggunakan air dan sabun atau menggunakan hand sanitizer.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center mb-4">
+            <p class="h3 text-protocol">Bagi para tamu undangan diharapkan mengikuti protokol pencegahan COVID-19.</p>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Protocol -->
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center pt-3">
-                    <p class="text-footer">Created <i class="fas fa-heart text-danger"></i> by Radhian Sobarna</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center pt-3">
+            <p class="text-footer">Created <i class="fas fa-heart text-danger"></i> by Radhian Sobarna</p>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- End Footer -->
 
+    <!-- Modal Angpou -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0">
+            <div class="card bg-maroon shadow">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col text-center">
+                    <h1 class="display-3 mb-4 text-heading-mempelai">Berikan Angpau</h1>
+                    <button type="button" class="btn-close my-4 mx-4 position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <p class="h4 text-body">Bagi yang ingin memberikan angpau sebagai hadiah untuk pernikahan kami, silakan transfer ke rekening ya 😊</p>
+
+                    <div class="row my-4 justify-content-center">
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="h4 text-body-maroon text-center mt-2 rounded">
+                              BRI <br />
+                              166001003076504 <br />
+                              Rida Amelia Ristia
+                            </p>
+                          </div>
+                        </div>
+
+                        <input type="text" class="form-control mt-4 text-center" value="166001003076504" id="rekWanita" readonly />
+                        <div class="d-grid gap-2 mb-4">
+                          <button class="btn btn-secondary" onclick="rekeningWanita()">Copy Nomor Rekening</button>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send?phone=6285318830818" target="_blank" class="btn btn-gold btn-lg mt-5 mb-4"><i class="far fa-paper-plane"></i> Klik Whatsapp</a>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="h4 text-body-maroon text-center mt-2 rounded">
+                              BRI <br />
+                              444701018621537 <br />
+                              Ade Tian
+                            </p>
+                          </div>
+                        </div>
+
+                        <input type="text" class="form-control mt-4 text-center" value="444701018621537" id="rekPria" readonly />
+                        <div class="d-grid gap-2 mb-4">
+                          <button class="btn btn-secondary" onclick="rekeningPria()">Copy Nomor Rekening</button>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send?phone=6281313537876" target="_blank" class="btn btn-gold btn-lg mt-5 mb-4"><i class="far fa-paper-plane"></i> Klik Whatsapp</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row my-4 justify-content-center">
+                  <div class="col-md-12 text-center">
+                    <p class="h4 text-body">Untuk konfirmasi pengiriman Angpau boleh ke nomor Whatsapp mempelai. Terimakasih 😊🙏</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Angpou -->
+
+    <!-- Modal kado -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0">
+            <div class="card bg-maroon shadow">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col text-center">
+                    <h1 class="display-3 mb-4 text-heading-mempelai">Kirim Kado</h1>
+                    <button type="button" class="btn-close my-4 mx-4 position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div class="row my-4 justify-content-center">
+                      <div class="col-md-8">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="h4 text-body-maroon text-center mt-2 rounded">Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group my-4">
+                          <input type="text" class="form-control" readonly value="Dsn. Sukajadi RT.17 RW.06 Desa. Hegarmanah Kec. Cidolog Kab. Ciamis" id="alamatPelai" />
+                          <button class="btn btn-secondary" onclick="alamatMempelai()">Copy Alamat Mempelai</button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8">
+                        <a href="https://api.whatsapp.com/send?phone=6285318830818" target="_blank" class="btn btn-gold btn-lg mt-5 mb-4"><i class="far fa-paper-plane"></i> Klik Whatsapp</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal kado -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <!-- firebase sdk link goes here -->
@@ -618,11 +718,16 @@
 
     <!-- Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="plugin/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="icon/js/all.min.js"></script>
     <script src="js/responsive.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/app.js"></script>
-</body>
-
+    <script src="js/body.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/onscroll.js"></script>
+  </body>
 </html>

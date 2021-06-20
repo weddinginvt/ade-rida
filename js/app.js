@@ -81,7 +81,7 @@ async function addData() {
         validasi('Isikan dulu nama !', 'warning');
         lodingStatus('off');
     } else if (message.value == '') {
-        validasi('Isikan dulu ucapan !', 'warning');
+        validasi('Isikan dulu pesan !', 'warning');
         lodingStatus('off');
     } else {
 

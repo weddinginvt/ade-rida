@@ -1,6 +1,6 @@
-// AOS.init({
-//     duration: 600,
-// });
+AOS.init({
+    duration: 1000,
+});
 
 function rekeningWanita() {
     /* Get the text field */

@@ -31,6 +31,9 @@
     <!-- Animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- Import AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Wedding</title>
   </head>
 
@@ -94,14 +97,14 @@
     <section id="cover" class="position-relative section-header">
       <div class="container">
         <div class="row justify-content-center mb-5">
-            <div class="col-10 col-lg-4 col-md-8 text-center mb-4">
+            <div class="col-10 col-lg-4 col-md-8 text-center mb-4" id="bingkai">
                 <img src="assets/bingkai-atas-baru.png" width="100%">
                 <div class="hr-bingkai"></div>
             </div>
-          <div class="col-12 text-center">
+          <div class="col-12 text-center" id="text-judul">
             <h1 class="display-2 text-cover mb-5">PERNIKAHAN</h1>
           </div>
-          <div class="col-md-5 text-center">
+          <div class="col-md-5 text-center" id="jadwal-akad">
             <img src="assets/dedua.png" width="100%" class="mb-2" />
             <h2 class="text-gold fw-bolder mb-4">Senin, 12 Juli 2021</h2>
             <a href="#akad" class="btn btn-lg btn-outline-gold">SAVE THE DATE</a>
@@ -115,7 +118,7 @@
     <section>
       <div class="container">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center" data-aos="fade-up">
             <p class="text-body">
               Maha Suci Allah SWT <br />
               Yang telah menciptakan makhlukNya berpasang-pasangan. Ya Allah, perkenankanlah dan Ridhoilah putra-putri kami :
@@ -132,9 +135,9 @@
         <!-- Mempelai Pria -->
         <div class="row mb-5">
           <div class="col-md-6 text-center mb-4">
-            <img src="assets/mempelai_pria.png" width="75%" />
+            <img src="assets/mempelai_pria.png" width="75%" data-aos="fade-right"/>
           </div>
-          <div class="col-md-6 text-center mt-5">
+          <div class="col-md-6 text-center mt-5" data-aos="fade-left">
             <p class="display-5 text-heading-mempelai fw-bold">Mempelai Pria</p>
             <p class="display-2 text-nama-mempelai">Ade Tian</p>
             <div>
@@ -152,9 +155,9 @@
         <!-- Mempelai Wanita -->
         <div class="row my-5">
           <div class="col-md-6 text-center d-block d-md-none">
-            <img src="assets/mempelai_wanita.png" width="75%" />
+            <img src="assets/mempelai_wanita.png" width="75%" data-aos="fade-left"/>
           </div>
-          <div class="col-md-6 text-center mt-5 mb-4">
+          <div class="col-md-6 text-center mt-5 mb-4" data-aos="fade-right">
             <p class="display-5 text-heading-mempelai fw-bold">Mempelai Wanita</p>
             <p class="display-2 text-nama-mempelai">Rida Amelia Ristia</p>
             <div>
@@ -166,7 +169,7 @@
             </div>
           </div>
           <div class="col-md-6 text-center d-none d-md-block">
-            <img src="assets/mempelai_wanita.png" width="75%" />
+            <img src="assets/mempelai_wanita.png" width="75%" data-aos="fade-left"/>
           </div>
         </div>
       </div>
@@ -177,7 +180,7 @@
     <section>
       <div class="container">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center" data-aos="fade-up">
             <p class="text-body">
               Untuk mengikuti Sunnah Rasul-Mu <br />
               dalam rangka membentuk keluarga yang sakinah, mawaddah,& warahmah. maka ijinkanlah kami menikahkannya.
@@ -193,7 +196,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="card card-syukuran border-0 shadow">
+            <div class="card card-syukuran border-0 shadow" data-aos="zoom-in-up">
               <div class="card-body p-md-0">
                 <div class="row">
                   <div class="col-md-6 text-center px-md-5">
@@ -278,7 +281,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="card card-akad border-0 shadow">
+            <div class="card card-akad border-0 shadow" data-aos="zoom-in-up">
               <div class="card-body p-md-0">
                 <div class="row">
                   <div class="col-md-6 bg-akad v-akad"></div>
@@ -342,14 +345,14 @@
       <div class="bg-semi-circle">
         <div class="container">
           <div class="row mt-5 justify-content-center">
-            <div class="col-12 mt-5 text-center">
-              <p class="text-body mb-4">
+            <div class="col-12 mt-5 text-center" data-aos="fade-up">
+              <p class="text-body mb-5">
                 "Mampukanlah kami menyelesaikan segala perkara. Memulai segala halang yang menghadang. Mewujudkan rencana-rencana baik. Sebab jatuh dan cinta telah kami lalui. Semoga dimudahkan
                 kemudian. Langkah-langkah akan menjadi satu tuju. Kelak, saat kami saling tua dan pelupa Do'akanlah agar kami tetap ingat bahwa cinta akan selalu lebih kuat. Anugerahi kami anak-anak
                 yang baik, rezeki yang berkah. Dan perasaan-perasaan yang tidak berubah. Tetap saling setia. Menghadapi apapun bersama. Jadikanlah pernikahan ini cara kami mendekatkan diri kepada
                 pemilik semesta, kepada sesama manusia."
               </p>
-              <p class="text-body fw-bold">-Boy Candra-</p>
+              <p class="text-body fw-bold mb-5">-Boy Candra-</p>
             </div>
           </div>
         </div>
@@ -361,13 +364,13 @@
     <section id="ceritakita" class="ceritakita">
       <div class="container">
         <div class="row">
-          <div class="col-12 mb-5 text-center">
+          <div class="col-12 my-5 text-center" data-aos="fade-up">
             <p class="display-2 fw-bolder text-nama-mempelai">Cerita Kita</p>
           </div>
 
           <div class="col-12">
             <ul class="timeline">
-              <li class="timeline-inverted mt-4" id="panel1">
+              <li class="timeline-inverted mt-4" id="panel1" data-aos="fade-up">
                 <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -381,7 +384,7 @@
                   </div>
                 </div>
               </li>
-              <li class="mt-4" id="panel2">
+              <li class="mt-4" id="panel2" data-aos="fade-up">
                 <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -396,7 +399,7 @@
                 </div>
               </li>
 
-              <li class="timeline-inverted mt-4" id="panel3">
+              <li class="timeline-inverted mt-4" id="panel3" data-aos="fade-up">
                 <div class="timeline-badge"><i class="fas fa-heart text-body-maroon"></i></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -425,7 +428,7 @@
             <div class="card border-0 bg-maroon mb-5">
               <div class="card-body">
                 <div class="row my-5">
-                  <div class="col-md-6 mb-4 text-center">
+                  <div class="col-md-6 mb-4 text-center" data-aos="fade-up">
                     <h4 class="text-body">WAKTU MENUJU ACARA</h4>
                     <h1 class="text-body fw-bold">Pernikahan Kami</h1>
                     <img src="assets/01-9-1-1024x176.png" width="40%" class="my-4" />
@@ -487,7 +490,7 @@
                     </div>
                   </div>
 
-                  <div class="col-md-6 text-center">
+                  <div class="col-md-6 text-center" data-aos="fade-up">
                     <h1 class="text-body fw-bold"><i>RSVP</i></h1>
                     <form name="rsvpForm">
                     <div class="form-group mt-4">
@@ -519,7 +522,8 @@
                     </form>
                     </div>
 
-                    <h4 class="text-body mt-5">KIRIM PESAN</h4>
+                    <div data-aos="fade-up"> 
+                      <h4 class="text-body mt-5">KIRIM PESAN</h4>
                     <h1 class="text-body fw-bold">Untuk Kedua Mempelai</h1>
 
                     <div class="form-group mt-4">
@@ -548,6 +552,8 @@
                         </div>
                       </div>
                     </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -584,7 +590,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5 text-center">
-            <p class="h3 text-protocol mt-4">
+            <p class="h3 text-protocol mt-4" data-aos="fade-up">
               Jangan ragu untuk datang, kami sudah berkoordinasi dengan semua pihak terkait pencegahan penularan COVID-19. Acara kami akan mengikuti segala prosedur protokol kesehatan untuk mencegah
               penularan COVID-19. So, don't be panic, we look forward to seeing you there!
             </p>
@@ -769,6 +775,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="plugin/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="icon/js/all.min.js"></script>
     <script src="js/responsive.js"></script>
     <script src="js/countdown.js"></script>

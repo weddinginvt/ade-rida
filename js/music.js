@@ -1,6 +1,7 @@
 $(document).ready(function () {
     document.getElementById("btnCover").disabled = false;
     document.getElementById("loCover").classList.add("d-none");
+    $("html, body").animate({ scrollTop: 0 }, 0);
 });
 
 let source = "./music/Beautiful-In-White_Shane-Filan.mp3";
@@ -51,4 +52,11 @@ function closeCover() {
         document.getElementById("coverBg").classList.add('d-none');
     }, 3000);
     $("html, body").animate({ scrollTop: 0 }, 0);
+    animateJudul();
+}
+
+function animateJudul() {
+    document.getElementById("bingkai").classList.add('animate__animated', 'animate__fadeInDown', 'animate__delay-1s');
+    document.getElementById("text-judul").classList.add('animate__animated', 'animate__fadeInDown', 'animate__delay-2s');
+    document.getElementById("jadwal-akad").classList.add('animate__animated', 'animate__zoomIn', 'animate__delay-3s');
 }

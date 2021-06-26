@@ -50,4 +50,5 @@ function closeCover() {
     setTimeout(function () {
         document.getElementById("coverBg").classList.add('d-none');
     }, 3000);
+    $("html, body").animate({ scrollTop: 0 }, 0);
 }

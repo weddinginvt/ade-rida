@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    // document.getElementById("btnCover").disabled = false;
-    // document.getElementById("loCover").classList.add("d-none");
+    document.getElementById("btnCover").disabled = false;
+    document.getElementById("loCover").classList.add("d-none");
 });
 
 let source = "./music/Beautiful-In-White_Shane-Filan.mp3";
@@ -45,6 +45,9 @@ btnToggleMusik.addEventListener("click", function () {
 
 function closeCover() {
     document.querySelector('html').style.overflowY = "visible";
-    document.getElementById("coverBg").classList.add('animate__animated', 'animate__fadeOutDown');
+    document.getElementById("coverBg").classList.add('animate__animated', 'animate__fadeOut', 'animate__slower');
     audio.play();
+    setTimeout(function () {
+        document.getElementById("coverBg").classList.add('d-none');
+    }, 3000);
 }

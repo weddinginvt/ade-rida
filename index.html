@@ -26,6 +26,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <title>Wedding</title>
   </head>
@@ -49,6 +53,42 @@
         <i class="fas fa-play mt-1 ms-2 d-none" id="iPlay"></i>
     </button>
     <!-- End Music bg -->
+
+    <!-- cover awal -->
+    <div class="bg-cover-awal" id="coverBg">
+      <div class="bg-filter-cover">
+        <img src="assets/b_pojok_atas.png" class="pojok-atas">
+        <img src="assets/b_pojok_bawah.png" class="pojok-bawah">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 center text-al">
+                      <div class="text-center">
+                          <img src="assets/bingkai-atas-baru.png" width="50%">
+                          <center>
+                            <div class="hr-bingkai-cover mb-4"></div>
+                          </center>
+                          <p class="display-6 text-cover-awal mb-3">
+                              Ade & Rida
+                          </p>
+                          <center>
+                            <div class="hr-bingkai-cover mt-4"></div>
+                          </center>
+                          <img src="assets/bingkai-bawah-baru.png" width="50%">
+                          <p class="text-cover mt-4">Undangan Spesial Untuk :</p>
+                          <button class="btn btn-gold btn-cover mt-2" onclick="closeCover()" id="btnCover"
+                              disabled><i class="fas fa-envelope-open"></i> Buka
+                              Undangan</button>
+                          <br>
+                          <div class="spinner-border text-light mt-3" role="status" id="loCover">
+                              <span class="visually-hidden">Loading...</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Cover Awal -->
 
     <!-- Judul -->
     <section id="cover" class="position-relative section-header">

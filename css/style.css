@@ -92,6 +92,18 @@ section {
   /* text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.261); */
 }
 
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-cover-awal {
+  font-family: "Dancing Script", cursive;
+  color: #ffd700;
+}
+
 .text-footer {
   color: #fff !important;
   font-family: "Salsa", cursive;
@@ -249,6 +261,42 @@ section {
   background-color: #ffd700;
 }
 
+.hr-bingkai-cover {
+  height: 2px !important;
+  width: 55%;
+  margin-top: 6px;
+  background-color: #ffd700;
+}
+
 .bingkai-bawah {
   padding-top: 0px;
+}
+
+.bg-cover-awal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999999999999999;
+}
+
+.bg-filter-cover {
+  background-color: #800000 !important;
+  z-index: 999999999999999999999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.pojok-atas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+}
+
+.pojok-bawah {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 25%;
 }

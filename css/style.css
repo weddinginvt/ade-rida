@@ -50,6 +50,10 @@ section {
   background-color: #edb16d;
 }
 
+.bg-gold {
+  background-color: #ffd700;
+}
+
 .bg-maroon {
   background-color: #800000;
 }
@@ -67,7 +71,7 @@ section {
 }
 
 .hr-syukuran {
-  border: 2px solid #5f3e24;
+  border: 2px solid #ffd700;
   width: 100%;
 }
 
@@ -119,6 +123,11 @@ section {
   font-family: "Salsa", cursive;
 }
 
+.text-body-white {
+  color: #fff !important;
+  font-family: "Salsa", cursive;
+}
+
 .text-body-mempelai {
   color: #ffd700 !important;
   font-family: "Salsa", cursive;
@@ -149,8 +158,13 @@ section {
 }
 
 .card-syukuran {
-  background-color: #fff;
-  border-radius: 16px;
+  /* background-color: #fff;
+  border-radius: 16px; */
+
+  background-image: url("../assets/bg-akad-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 .card-akad {
@@ -204,7 +218,7 @@ section {
 }
 
 .v-syukuran {
-  background-image: url("../assets/ebcb13bb58be75a9ada6a84e46796c0b.jpg");
+  /* background-image: url("../assets/ebcb13bb58be75a9ada6a84e46796c0b.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;

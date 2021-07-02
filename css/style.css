@@ -21,8 +21,24 @@ section {
   padding-top: 2rem;
 }
 
-.ceritakita {
+section.bg-kata {
+  padding-bottom: 5rem;
+}
+
+.bg-kata {
   background-color: #800000;
+}
+
+.ceritakita {
+  /* background-color: #fff; */
+  background-image: url("../assets/FOTO_TIMELINE.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.ceritakita {
+  padding-bottom: 5rem;
 }
 
 .acara {
@@ -43,7 +59,11 @@ section {
 }
 
 .bg-semi-circle {
-  background-color: #800000;
+  /* background-color: #fff; */
+  background-image: url("../assets/KATA2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 .bg-kuning {
@@ -76,7 +96,7 @@ section {
 }
 
 .hr-akad {
-  border: 2px solid #5f3e24;
+  border: 2px solid #ffd700;
   width: 100%;
 }
 
@@ -158,9 +178,8 @@ section {
 }
 
 .card-syukuran {
-  /* background-color: #fff;
-  border-radius: 16px; */
-
+  /* background-color: #fff; */
+  border-radius: 16px;
   background-image: url("../assets/bg-akad-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -168,8 +187,12 @@ section {
 }
 
 .card-akad {
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 16px;
+  background-image: url("../assets/bg_resepsi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-resepsi {

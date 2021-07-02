@@ -35,6 +35,7 @@ section.bg-kata {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 16px;
 }
 
 section.ceritakita {
@@ -64,6 +65,7 @@ section.ceritakita {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  border-radius: 16px;
 }
 
 .bg-kuning {
